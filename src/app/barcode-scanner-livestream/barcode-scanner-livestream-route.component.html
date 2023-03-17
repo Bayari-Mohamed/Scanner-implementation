@@ -1,14 +1,37 @@
-<button (click)="torch = !torch">Torch</button>
+<div  class='parent'>
+  <div class="table-container">
+
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">Stop</th>
+          <th scope="col">Start</th>
+          <th scope="col">Barcode value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          
+          <td> <button class="btn btn-info" (click)="startscan()" >Start Scan</button></td>
+          <td> <button class="btn btn-danger" (click)="stopscan()">Stop Scan</button></td>
+          <td>
+           <output type="text" value="{{ barcodeValue }}"> </output>
+          </td>
+        </tr>
+        
+        
+      </tbody>
+    </table>
+  </div>
+
+
 <div class="barcode-scanner-container">
   <barcode-scanner-livestream
-    [type]="['code_128', 'code_39', 'ean_8']"
+    [type]="['code_128', 'code_39', 'ean_8','ean_8']"
     [errorFilter]="{ median: 0.08, threshold: 0.1 }"
-    [torch]="torch"
     (valueChanges)="onValueChanges($event)"
-    (started)="onStarted($event)"
+   
   ></barcode-scanner-livestream>
 </div>
 
-<div class="barcode-value" [hidden]="!barcodeValue">
-  {{ barcodeValue }}
 </div>

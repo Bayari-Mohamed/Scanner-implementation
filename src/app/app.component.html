@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg n navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand" href="#">ngx-barcode-scanner</a>
     <button
@@ -10,39 +10,23 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" [collapse]="isCollapsed">
-      <ul class="navbar-nav mr-auto">
+    <div class="collapse navbar-collapse " [collapse]="isCollapsed">
+      <ul class="">
         <li class="nav-item active">
           <a class="nav-link" href="#"
-            >Demo <span class="sr-only">(current)</span></a
-          >
-        </li>
+            > 
+          </a>
+          </li>
+        
       </ul>
     </div>
   </div>
 </nav>
 
 <div class="container">
-  <div class="row">
-    <main class="col-12 py-md-3 pl-md-5">
-      <h1>About</h1>
-      <div>
-        ngx-barcode-scanner is an Angular wrapper for <a href="https://github.com/ericblade/quagga2">quagga2</a>
-        which is a fork of barcode reader library <a href="https://serratus.github.io/quaggaJS/">quaggajs</a>.
-        <br>
-        <br>
-        It provides 2 components to read barcode with a camera in a livestream :
-        <ul>
-          <li>
-            <a routerLink="livestream">barcode-scanner-livestream</a>: a simple
-            livestream component, that can be integrated in any page or component
-          </li>
-          <li>
-            <a routerLink="livestream-overlay">barcode-scanner-livestream-overlay</a>: an overlay livestream component
-          </li>
-        </ul>
-      </div>
+ 
+          
+      
       <router-outlet></router-outlet>
-    </main>
-  </div>
+   
 </div>

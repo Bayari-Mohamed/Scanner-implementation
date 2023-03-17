@@ -10,13 +10,11 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BarcodeScannerLivestreamRouteComponent } from './barcode-scanner-livestream';
-import { BarcodeScannerOverlayRouteComponent } from './barcode-scanner-livestream-overlay';
 
 @NgModule({
   declarations: [
     AppComponent,
     BarcodeScannerLivestreamRouteComponent,
-    BarcodeScannerOverlayRouteComponent,
   ],
   imports: [
     BrowserModule,

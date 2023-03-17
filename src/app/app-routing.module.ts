@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BarcodeScannerLivestreamRouteComponent } from './barcode-scanner-livestream';
-import { BarcodeScannerOverlayRouteComponent } from './barcode-scanner-livestream-overlay';
 
 const routes: Routes = [
   {
@@ -13,10 +12,7 @@ const routes: Routes = [
     path: 'livestream',
     component: BarcodeScannerLivestreamRouteComponent,
   },
-  {
-    path: 'livestream-overlay',
-    component: BarcodeScannerOverlayRouteComponent,
-  },
+  
 ];
 
 @NgModule({

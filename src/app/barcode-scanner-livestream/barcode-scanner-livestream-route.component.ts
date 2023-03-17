@@ -7,7 +7,7 @@ import { BarcodeScannerLivestreamComponent } from 'ngx-barcode-scanner';
     templateUrl: './barcode-scanner-livestream-route.component.html',
     styleUrls: ['./barcode-scanner-livestream-route.component.scss']
 })
-export class BarcodeScannerLivestreamRouteComponent implements AfterViewInit {
+export class BarcodeScannerLivestreamRouteComponent  {
 
     @ViewChild(BarcodeScannerLivestreamComponent)
     barcodeScanner: BarcodeScannerLivestreamComponent;
@@ -16,9 +16,7 @@ export class BarcodeScannerLivestreamRouteComponent implements AfterViewInit {
 
     barcodeValue: string;
 
-    ngAfterViewInit(): void {
-        this.barcodeScanner.start();
-    }
+    
 
     onValueChanges(result: QuaggaJSResultObject): void {
         console.log(result.codeResult.code)
@@ -28,5 +26,10 @@ export class BarcodeScannerLivestreamRouteComponent implements AfterViewInit {
     onStarted(event): void {
         console.log('started', event);
     }
-
+  startscan(){
+    this.barcodeScanner.start();
+  }
+  stopscan(){
+    this.barcodeScanner.stop();
+  }
 }
